@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>Tooltip Imtyaaz</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+      div#a {
+        padding: 25px 50px 35px 50px;
+        background-color: lightcyan;
+        text-align: center;
+      }
+
+      div#c {
+        padding: 5px 5px 5px 5px;
+        background-color: #ffcccc;
+        text-align: center; 
+      }
+    </style>
+  </head>
+  
+  <body>
+
+    <hr>
+      <div id="a">Namaku <mark>Imtyaaz Achsanul Kamila</mark>, yang kalian lihat ini adalah halaman web untuk tugas &#x1F4AF mata kuliah  Pemrograman Web &#x1F4AF <br>
+      &#x1F496; Kalian bisa kenal aku dengan melihat halaman ini. Salam kenal ya!! &#x1F496 <br></div>
+    </hr>
+
+    <center><h5><b>Cara main : Arahin cursor ke kotak!</b></h5></center>
+
+    <div id="c" class="container">
+      <a href="#" data-toggle="tooltip" title="Imtyaaz Achsanul Kamila">Namaku</a>
+    </div>
+
+    <div id="c" class="container">
+      <a href="#" data-toggle="tooltip" title="5026201059">NRP</a>
+    </div>
+
+    <div id="c" class="container mt-3">
+      <a href="#" data-toggle="tooltip" title="Tyas">Panggilan</a>
+    </div>
+
+    <div id="c" class="container mt-3">
+      <a href="#" data-toggle="tooltip" title="8 Juni 2002">Tanggal Lahir</a>
+    </div>
+
+    <div id="c" class="container mt-3">
+      <a href="#" data-toggle="tooltip" title="082228415987">No. Telp</a>
+    </div>
+
+    <script>
+      $(document).ready(function(){
+        $('[data-toggle="tooltip"]').tooltip();   
+      });
+    </script>
+
+    <br>
+
+    <center>
+      <div>
+        <button class="btn btn-success">SMP</button>
+        <button class="btn btn-danger">SMA</button>
+        <button class="btn btn-primary">Institut</button>
+      </div>
+
+      <script>
+        $(document).ready(function(){
+          $('.btn-success').tooltip({title: "SMPN 19 Surabaya", placement: "bottom"}); 
+          $('.btn-danger').tooltip({title: "SMAN 4 Surabaya", placement: "left"}); 
+          $('.btn-primary').tooltip({title: "ITS Surabaya", placement: "right"}); 
+        });
+      </script>
+
+      <br>
+
+      <div>
+        <button class="btn btn-warning">Click Aku</button>
+      </div>
+    
+      <script>
+        $(document).ready(function(){
+          $('.btn-warning').tooltip({title: "TERIMA KASIH! Sudah lihat customize tooltipku!", trigger: "click"});  
+        });
+        </script>
+    </center>
+  
+  </body>
+</html>
