@@ -31,3 +31,19 @@ Route::get('ETS', 'ViewController@showETS');
 
 Route::get('TugasPHP', 'ViewController@showTugasPHP');
 Route::post('pangkat', 'ViewController@showpangkat');
+
+//route CRUD
+Route::get('/pegawai','PegawaiController@index');
+Route::get('/pegawai/tambah','PegawaiController@tambah');
+Route::post('/pegawai/store','PegawaiController@store');
+Route::get('/pegawai/edit/{id}','PegawaiController@edit');
+Route::post('/pegawai/update','PegawaiController@update');
+Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
+
+//route CRUD
+Route::get('/absen','AbsenController@index');
+Route::get('/absen/tambah','AbsenController@tambah');
+Route::post('/absen/store','AbsenController@store');
+Route::get('/absen/edit/{ID}','AbsenController@edit');
+Route::post('/absen/update','AbsenController@update');
+Route::get('/absen/hapus/{ID}','AbsenController@hapus');
