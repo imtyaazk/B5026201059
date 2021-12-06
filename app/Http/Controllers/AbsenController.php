@@ -23,7 +23,9 @@ class AbsenController extends Controller
     {
 
         // memanggil view tambah
-        return view('absen.tambah');
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
+
+        return view('absen.tambah', ['pegawai' => $pegawai]);
 
     }
 
@@ -46,8 +48,10 @@ class AbsenController extends Controller
     {
         // mengambil data pegawai berdasarkan id yang dipilih
         $absen = DB::table('absen')->where('ID',$id)->get();
+
+        $pegawai = DB::table('pegawai')->orderBy('pegawai_nama', 'asc')->get();
         // passing data pegawai yang didapat ke view edit.blade.php
-        return view('absen.edit',['absen' => $absen]);
+        return view('absen.edit',['absen' => $absen, 'pegawai'=> $pegawai]);
 
     }
 
