@@ -6,7 +6,7 @@
 
 @section('judulhalaman', 'ABSEN PEGAWAI')
 
-
+    <a href="/absen"> Kembali</a>
 
 	<form action="/absen/store" method="post">
 		{{ csrf_field() }}
