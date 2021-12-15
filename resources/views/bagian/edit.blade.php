@@ -22,7 +22,7 @@
         Jumlah <input type="text" name="nama" required="required" value="{{ $b->namabagian }}">
         Jumlah <input type="number" name="jumlah" required="required" value="{{ $b->jumlahbagian }}">
 		Status
-        <input type="radio" id="hadir" name="status" value="H" @if ($p->Status === "H") checked="checked" @endif>
+        <input type="radio" id="tersedia" name="status" value="H" @if ($p->Status === "H") checked="checked" @endif>
         <label for="hadir">Tersedia</label>
         <input type="radio" id="tidak" name="status" value="T" @if ($p->Status === "T") checked="checked" @endif>
         <label for="tidak">Tidak Tersedia</label><br>

@@ -32,7 +32,7 @@ Route::get('ETS', 'ViewController@showETS');
 Route::get('TugasPHP', 'ViewController@showTugasPHP');
 Route::post('pangkat', 'ViewController@showpangkat');
 
-//route CRUD
+//route CRUD pegawai
 Route::get('/pegawai','PegawaiController@index');
 Route::get('/pegawai/tambah','PegawaiController@tambah');
 Route::post('/pegawai/store','PegawaiController@store');
@@ -41,14 +41,14 @@ Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
 Route::get('/pegawai/cari','PegawaiController@cari');
 Route::get('/pegawai/detail{id}','PegawaiController@view');
-//route CRUD
+//route CRUD absen
 Route::get('/absen','AbsenController@index');
 Route::get('/absen/tambah','AbsenController@tambah');
 Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{ID}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{ID}','AbsenController@hapus');
-//route CRUD
+//route CRUD bagian
 Route::get('/bagian','BagianController@index');
 Route::get('/bagian/tambah','BagianController@tambah');
 Route::post('/bagian/store','BagianController@store');
@@ -57,3 +57,10 @@ Route::post('/bagian/update','BagianController@update');
 Route::get('/bagian/hapus/{id}','BagianController@hapus');
 Route::get('/bagian/cari','BagianController@cari');
 Route::get('/bagian/detail{id}','BagianController@view');
+//route CRUD nilai kuliah
+Route::get('/nilai','NilaiController@index');
+Route::get('/nilai/tambah','NilaiController@tambah');
+Route::post('/nilai/store','NilaiController@store');
+Route::get('/nilai/edit/{ID}','NilaiController@edit');
+Route::post('/nilai/update','NilaiController@update');
+Route::get('/nilai/hapus/{ID}','NilaiController@hapus');

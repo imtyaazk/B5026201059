@@ -55,7 +55,7 @@
       <a href="/pegawai" class="w3-bar-item w3-button">Pegawai</a>
       <a href="/absen" class="w3-bar-item w3-button">Absen</a>
       <a href="/bagian" class="w3-bar-item w3-button">Bagian</a>
-      <a href="/pegawai" class="w3-bar-item w3-button">UAS</a>
+      <a href="/nilai" class="w3-bar-item w3-button">UAS</a>
     </div><br>
 
     <div style="margin-left:25%">
