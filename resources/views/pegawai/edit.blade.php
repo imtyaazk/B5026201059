@@ -1,12 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('layout.ceria')
 
-	<h2><a href="https://www.malasngoding.com">www.malasngoding.com</a></h2>
-	<h3>Edit Pegawai</h3>
+@section('title', 'PEGAWAI')
+
+<style>
+    form{
+        padding: 30px;
+        width: 100%;
+        margin: 10px, 10px, 10px, 10px;
+        box-align: initial;
+    }
+</style>
+
+@section('isikonten')
+
+@section('judulhalaman', 'Edit Pegawai')
 
 	<a href="/pegawai"> Kembali</a>
 
@@ -25,6 +32,4 @@
 	</form>
 	@endforeach
 
-
-</body>
-</html>
+    @endsection

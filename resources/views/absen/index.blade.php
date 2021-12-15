@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tugas Laravel CRUD</title>
-</head>
-<body>
+@extends('layout.ceria')
 
-	<h3>Data Absen Pegawai</h3>
+@section('title', 'Absen Pegawai')
+
+@section('judulhalaman', 'Absen Pegawai')
+
+@section('isikonten')
 
 	<a href="/absen/tambah"> + Tambah Absen Baru</a>
 
@@ -35,5 +34,4 @@
 		@endforeach
 	</table>
 
-</body>
-</html>
+@endsection

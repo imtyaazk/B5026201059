@@ -1,10 +1,19 @@
 @extends('layout.ceria')
 
-@section('title', 'ABSEN PEGAWAI')
+@section('title', 'Absen Pegawai')
+
+<style>
+    form{
+        padding: 30px;
+        width: 100%;
+        margin: 10px, 10px, 10px, 10px;
+        box-align: initial;
+    }
+</style>
+
+@section('judulhalaman', 'Absen Pegawai')
 
 @section('isikonten')
-
-@section('judulhalaman', 'ABSEN PEGAWAI')
 
     <a href="/absen"> Kembali</a>
 
@@ -38,3 +47,4 @@
 		<input type="submit" value="Simpan Data">
 	</form>
 
+@endsection

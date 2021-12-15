@@ -1,6 +1,6 @@
 @extends('layout.ceria')
 
-@section('title', 'PEGAWAI')
+@section('title', 'BAGIAN')
 
 <style>
     form{
@@ -12,20 +12,20 @@
 </style>
 
 
-@section('judulhalaman', 'Data Pegawai')
+@section('judulhalaman', 'Data Bagian')
 
 @section('isikonten')
 
     <button type="button" class="btn btn-warning">
-        <a href="/pegawai/tambah"> + Tambah Pegawai Baru</a>
+        <a href="/bagian/tambah"> + Tambah Bagian Baru</a>
     </button>
 
 	<br/>
 	<br/>
 
     <div class="container" style="margin-left: 300px; margin-bottom: 20px; margin-top: 20px">
-        <form action="/pegawai/cari" method="GET">
-            <input class="form-control col-md-8" type="text" name="cari" placeholder="Cari Pegawai.." value="{{ old('cari') }}">
+        <form action="/bagian/cari" method="GET">
+            <input class="form-control col-md-8" type="text" name="cari" placeholder="Cari Bagian.." value="{{ old('cari') }}">
             <input class="form-control col-md-8 btn-success" type="submit" value="Cari">
         </form>
     </div>
@@ -33,27 +33,25 @@
 	<table border="1">
 		<tr>
             <th>No</th>
+			<th>Kode</th>
 			<th>Nama</th>
-			<th>Jabatan</th>
-			<th>Umur</th>
-			<th>Alamat</th>
-			<th>Opsi</th>
+			<th>Jumlah</th>
+			<th>Tersedia</th>
 		</tr>
-		@foreach($pegawai as $p)
+		@foreach($bagian as $b)
 		<tr>
-            <td>{{ $loop->iteration }}</td>
-			<td>{{ $p->pegawai_nama }}</td>
-			<td>{{ $p->pegawai_jabatan }}</td>
-			<td>{{ $p->pegawai_umur }}</td>
-			<td>{{ $p->pegawai_alamat }}</td>
+			<td>{{ $loop->iteration }}</td>
+			<td>{{ $b->namabagian }}</td>
+			<td>{{ $b->jumlahbagian }}</td>
+			<td>{{ $b->tersedia }}</td>
 			<td>
-                <a href="/pegawai/detail/{{ $p->pegawai_id }}">
+				<a href="/bagian/detail/{{ $b->kodebagian }}">
                     <button type="button" class="btn btn-info">Detail</button>
                 </a>
-				<a href="/pegawai/edit/{{ $p->pegawai_id }}">
+				<a href="/bagian/edit/{{ $b->kodebagian }}">
                     <button type="button" class="btn btn-info">Edit</button>
                 </a>
-				<a href="/pegawai/hapus/{{ $p->pegawai_id }}">
+				<a href="/bagian/hapus/{{ $b->kodebagian }}">
                     <button type="button" class="btn btn-info">Hapus</button>
                 </a>
 			</td>
@@ -63,6 +61,6 @@
 
     <br>
 
-	{{ $pegawai->links()  }}
+	{{ $bagian->links()  }}
 
     @endsection

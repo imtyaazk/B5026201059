@@ -1,12 +1,21 @@
 @extends('layout.ceria')
 
-@section('title', 'ABSEN PEGAWAI')
+@section('title', 'Absen Pegawai')
+
+        <style>
+            form{
+                padding: 30px;
+                width: 100%;
+                margin: 10px, 10px, 10px, 10px;
+                box-align: initial;
+            }
+        </style>
+
+@section('judulhalaman', 'Edit Absen')
 
 @section('isikonten')
 
-@section('judulhalaman', 'EDIT ABSEN')
-
-	@foreach($absen as $p)
+@foreach($absen as $p)
 	<form action="/absen/update" method="post">
 		{{ csrf_field() }}
 		<input type="hidden" name="id" value="{{ $p->ID }}"> <br/>
@@ -41,4 +50,4 @@
 	@endforeach
 
 
-    @endsection
+ @endsection

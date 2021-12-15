@@ -39,7 +39,8 @@ Route::post('/pegawai/store','PegawaiController@store');
 Route::get('/pegawai/edit/{id}','PegawaiController@edit');
 Route::post('/pegawai/update','PegawaiController@update');
 Route::get('/pegawai/hapus/{id}','PegawaiController@hapus');
-
+Route::get('/pegawai/cari','PegawaiController@cari');
+Route::get('/pegawai/detail{id}','PegawaiController@view');
 //route CRUD
 Route::get('/absen','AbsenController@index');
 Route::get('/absen/tambah','AbsenController@tambah');
@@ -47,3 +48,12 @@ Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{ID}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{ID}','AbsenController@hapus');
+//route CRUD
+Route::get('/bagian','BagianController@index');
+Route::get('/bagian/tambah','BagianController@tambah');
+Route::post('/bagian/store','BagianController@store');
+Route::get('/bagian/edit/{id}','BagianController@edit');
+Route::post('/bagian/update','BagianController@update');
+Route::get('/bagian/hapus/{id}','BagianController@hapus');
+Route::get('/bagian/cari','BagianController@cari');
+Route::get('/bagian/detail{id}','BagianController@view');

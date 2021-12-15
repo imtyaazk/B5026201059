@@ -54,6 +54,8 @@
       <h3 class="w3-bar-item">Menu</h3>
       <a href="/pegawai" class="w3-bar-item w3-button">Pegawai</a>
       <a href="/absen" class="w3-bar-item w3-button">Absen</a>
+      <a href="/bagian" class="w3-bar-item w3-button">Bagian</a>
+      <a href="/pegawai" class="w3-bar-item w3-button">UAS</a>
     </div><br>
 
     <div style="margin-left:25%">
@@ -67,7 +69,7 @@
         <tr>
             <td>5026201059</td>
         </tr>
-    </table> 
+    </table>
     </div>
     <br>
 
@@ -82,6 +84,6 @@
     <div class="footer">
       <p>Hak Cipta 5026201059 - Imtyaaz Achsanul Kamila</p>
     </div>
-    
+
   </body>
 </html>
